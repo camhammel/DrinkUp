@@ -7,11 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText p1, p2, p3, p4, p5, p6;
     public static String[] players;
     Button ready;
+    public static List finalplayers;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         players = new String[6];
+        finalplayers = new ArrayList();
 
         p1 = findViewById(R.id.startP1);
         p2 = findViewById(R.id.startP2);
@@ -41,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 players[3] = p4.getText().toString();
                 players[4] = p5.getText().toString();
                 players[5] = p6.getText().toString();
+
+
+                for (int j=0; j<6; j++)
+                {
+                    if (! players[j].equals(""))
+                    {
+                        finalplayers.add(players[j]);
+                    }
+                }
+
                 view.getContext().startActivity(i);
             }
         });

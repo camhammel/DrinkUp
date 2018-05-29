@@ -1,6 +1,8 @@
 package com.cameronhammel.cam.drinkup;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -14,6 +16,7 @@ public class Eight extends AppCompatActivity
 
     String [] texts;
     TextView tv;
+    ConstraintLayout cl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,13 +25,13 @@ public class Eight extends AppCompatActivity
         setContentView(R.layout.activity_eight);
 
         texts = new String[10];
-        texts[0] = "@, have 8 sips!";
-        texts[1] = "@, take a drink!";
-        texts[2] = "@, take a sip each time you swear in the next 5 turns";
+        texts[0] = "@, list 8 Disney characters or take 3 sips!";
+        texts[1] = "@, take 2 sips!";
+        texts[2] = "@, take a sip each time you're caught swearing in the next 8 turns!";
         texts[3] = "@, take 3 sips!";
-        texts[4] = "@, example";
-        texts[5] = "@, example";
-        texts[6] = "@, example";
+        texts[4] = "example";
+        texts[5] = "example";
+        texts[6] = "example";
         texts[7] = "@, example";
         texts[8] = "@, example";
         texts[9] = "@, example";
@@ -40,18 +43,22 @@ public class Eight extends AppCompatActivity
     private void playRound()
     {
         tv = findViewById(R.id.eightText);
+        cl = findViewById(R.id.constraintLayout);
         refreshText(tv);
     }
 
+    @SuppressLint("ResourceAsColor")
     public void refreshText(View view)
     {
+        cl.setBackgroundColor(R.color.colorPrimary);
         tv.setText(generateText());
     }
 
     private String generateText()
     {
         String n = texts[(int) (Math.random() * texts.length)];
-        n = n.replaceAll("@", MainActivity.players[0]);
+        int z = (int) (Math.random() * MainActivity.finalplayers.size());
+        n = n.replaceAll("@", MainActivity.finalplayers.get(z) + "");
         return n;
     }
 }
