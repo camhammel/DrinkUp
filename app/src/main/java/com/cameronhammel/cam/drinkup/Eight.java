@@ -37,17 +37,17 @@ public class Eight extends AppCompatActivity
         completed = new ArrayList<String>();
         completed.add("test");
         //names are accessed using the "@" key
-        texts = new String[35];
+        texts = new String[41];
         texts[0] = "@, list 8 Disney characters or take 3 sips";
         texts[1] = "@, list 8 European countries or take 3 sips";
         texts[2] = "@, take a sip each time you're caught swearing in the next 8 turns";
         texts[3] = "@, draw a # using snapchat and send it to any 8 friends or take 4 sips";
         texts[4] = "@, draw a # using snapchat and send it to any 8 friends or take 4 sips";
-        texts[5] = "@, draw a # using snapchat and send it to any 8 friends or take 4 sips";
+        texts[5] = "@, if > is a pussy drinker give them 3 drinks. If they're outdrinking you drink 4 drinks.";
         texts[6] = "Drink 3 times if you haven't been to & in the past 8 months";
         texts[7] = "Drink 3 times if you haven't been to & in the past 8 months";
-        texts[8] = "Drink 3 times if you haven't been to & in the past 8 months";
-        texts[9] = "@, send an erotic text of 8 words or more to a friend or take 5 sips";
+        texts[8] = "Hand the phone over to @. @, imitate a #; if nobody is able to guess what you're imitating, drink 3 times.";
+        texts[9] = "@, send an erotic text of 8 words or more to a friend or take 4 sips";
         texts[10] = "@, play the first 8 seconds of a random song on your phone. If nobody can guess the artist, take 3 sips";
         texts[11] = "If you've masturbated in the past 8 hours, take 3 sips";
         texts[12] = "@, distribute 8 sips to other players (it doesn't have to be fair!)";
@@ -57,8 +57,8 @@ public class Eight extends AppCompatActivity
         texts[16] = "If your first name has 8 letters or more, drink 3 times";
         texts[17] = "@, list 8 synonyms of the word 'vagina' or drink 3 sips";
         texts[18] = "@, list 8 date night ideas or drink 3 times";
-        texts[19] = "If you have a sibling with 8 or more years difference in age, drink 5 times";
-        texts[20] = "The person in the room with the worst british accent must drink 4 times";
+        texts[19] = "If you have a sibling with 8 or more years difference in age, drink 4 times";
+        texts[20] = "Do your best impression of the Queen. The person in the room with the worst british accent must drink 3 times";
         texts[21] = "If you've gone mini-golfing in the past 8 months, give out 3 sips";
         texts[22] = "@, if you have $8 or less cash on hand, give out 5 sips";
         texts[23] = "The oldest player in the room may give out 8 sips";
@@ -73,9 +73,15 @@ public class Eight extends AppCompatActivity
         texts[32] = "Whoever has the most snapchat friends may give out 8 sips";
         texts[33] = "@, sing the chorus of =. If you can, give out 8 sips";
         texts[34] = "@, you have 8 seconds to recite the alphabet. If you can't in time, drink 4 times";
+        texts[35] = "If you're following over 800 people on Instagram, drink twice.";
+        texts[36] = "(Don't read this question out loud) - The owner of the phone must stare at @ for 8 seconds. Whichever person laughs first must drink 3 times.";
+        texts[37] = "If you own a record player, give out 8 sips to your choice of players.";
+        texts[38] = "@, imitate another player of your choice. If anyone is able to guess which player @ is imitating, the imitated player must drink 4 times.";
+        texts[39] = "If you've ever borrowed clothes from a partner, take 3 sips.";
+
 
         //list of nouns accessed using the # key
-        words = new String[11];
+        words = new String[30];
         words[0] = "giraffe";
         words[1] = "monkey";
         words[2] = "penis";
@@ -87,6 +93,25 @@ public class Eight extends AppCompatActivity
         words[8] = "self-portrait";
         words[9] = "female body";
         words[10] = "buzz lightyear";
+        words[11] = "cereal mascot";
+        words[12] = "god";
+        words[13] = "spontaneous combustion";
+        words[14] = "bat-shit crazy amish folk";
+        words[15] = "didgeridoo";
+        words[16] = "succubus";
+        words[17] = "pioneer";
+        words[18] = "government";
+        words[19] = "booty";
+        words[20] = "thong";
+        words[21] = "catamaran";
+        words[22] = "lasagna";
+        words[23] = "boogeyman";
+        words[24] = "toilet";
+        words[25] = "Rick Astley";
+        words[26] = "chicken";
+        words[27] = "Barack Obama";
+        words[28] = "kitten";
+        words[29] = "kamikaze";
 
         //list of destinations accessed using the & key
         places = new String[11];
@@ -115,6 +140,7 @@ public class Eight extends AppCompatActivity
         songs[8] = "I Want It That Way by the Backstreet Boys";
         songs[9] = "Sweet Caroline by Neil Diamond";
 
+
         playRound();
     }
 
@@ -141,9 +167,9 @@ public class Eight extends AppCompatActivity
 
         else if (!completed.contains(newText))
         {
-            int c1 = (int) (50 + (Math.random() * 205));
-            int c3 = (int) (50 + (Math.random() * 205));
-            int c2 = (int) (50 + (Math.random() * 205));
+            int c1 = (int) ((Math.random() * 255) - 50);
+            int c3 = (int) ((Math.random() * 255) - 50);
+            int c2 = (int) ((Math.random() * 255) - 50);
             cl.setBackgroundColor(Color.rgb(c1, c2, c3));
             tv.setText(newText);
             completed.add(newText);
@@ -163,7 +189,16 @@ public class Eight extends AppCompatActivity
         int x = (int) (Math.random() * words.length);
         int y = (int) (Math.random() * places.length);
         int z = (int) (Math.random() * MainActivity.finalplayers.size());
+        int z2 = (int) (Math.random() * MainActivity.finalplayers.size());
+        int counter = 0;
+            while (z2 == z || counter <= 4)
+            {
+                z2 = (int) (Math.random() * MainActivity.finalplayers.size());
+                counter++;
+            }
+
         n = n.replaceAll("@", MainActivity.finalplayers.get(z) + "");
+        n = n.replaceAll(">", MainActivity.finalplayers.get(z2) + "");
         n = n.replaceAll("#", words[x]);
         n = n.replaceAll("&", places[y]);
         n = n.replaceAll("=", songs[v]);
