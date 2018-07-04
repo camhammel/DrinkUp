@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="32dp"
         android:text="Please Select a Game Below:"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         tools:layout_editor_absoluteX="176dp"
         tools:layout_editor_absoluteY="16dp" />
 
