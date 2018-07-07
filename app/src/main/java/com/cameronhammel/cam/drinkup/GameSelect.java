@@ -16,11 +16,9 @@ public class GameSelect extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_select);
 
-        Toast.makeText(getApplicationContext(), MainActivity.players[0], Toast.LENGTH_LONG).show();
-
         Button eight = findViewById(R.id.button1);
-        Button mostlikely = findViewById(R.id.button2);
-        Button vocal = findViewById(R.id.button3);
+        Button trivia = findViewById(R.id.button2);
+        Button mostlikely = findViewById(R.id.button3);
         Button drinkif = findViewById(R.id.button4);
 
         eight.setOnClickListener(new View.OnClickListener()
@@ -32,5 +30,26 @@ public class GameSelect extends AppCompatActivity
                 startActivity(i);
             }
         });
+
+        trivia.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(getApplicationContext(), Trivia.class);
+                startActivity(i);
+            }
+        });
+
+        mostlikely.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(getApplicationContext(), MostLikely.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

@@ -24,6 +24,7 @@ public class Eight extends AppCompatActivity
     String [] places;
     String [] songs;
     List<String> completed;
+    int turncounter = -1;
 
     TextView tv;
     ConstraintLayout cl;
@@ -34,10 +35,13 @@ public class Eight extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eight);
 
+        tv = findViewById(R.id.eightText);
+        cl = findViewById(R.id.eightConstraintLayout);
+
         completed = new ArrayList<String>();
         completed.add("test");
         //names are accessed using the "@" key
-        texts = new String[41];
+        texts = new String[40];
         texts[0] = "@, list 8 Disney characters or take 3 sips";
         texts[1] = "@, list 8 European countries or take 3 sips";
         texts[2] = "@, take a sip each time you're caught swearing in the next 8 turns";
@@ -133,7 +137,7 @@ public class Eight extends AppCompatActivity
         songs[1] = "Roxanne by The Police";
         songs[2] = "Hotel California by The Eagles";
         songs[3] = "Stronger by Kanye West";
-        songs[4] = "The James Bond theme";
+        songs[4] = "the Mission Impossible theme";
         songs[5] = "Redbone by Childish Gambino";
         songs[6] = "The Final Countdown by Europe";
         songs[7] = "Stacy's Mom by Bowling For Soup";
@@ -146,8 +150,7 @@ public class Eight extends AppCompatActivity
 
     private void playRound()
     {
-        tv = findViewById(R.id.eightText);
-        cl = findViewById(R.id.constraintLayout);
+
         refreshText(tv);
     }
 
@@ -167,13 +170,30 @@ public class Eight extends AppCompatActivity
 
         else if (!completed.contains(newText))
         {
-            int c1 = (int) ((Math.random() * 255) - 50);
-            int c3 = (int) ((Math.random() * 255) - 50);
-            int c2 = (int) ((Math.random() * 255) - 50);
-            cl.setBackgroundColor(Color.rgb(c1, c2, c3));
-            tv.setText(newText);
-            completed.add(newText);
+            if (newText.contains("turns"))
+            {
+                turncounter = 8;
+            }
+
+            if (turncounter == 0)
+            {
+                cl.setBackgroundColor(Color.GREEN);
+                tv.setText("All players can now swear again.");
+                turncounter = -1;
+            }
+
+            else
+                {
+                int c1 = (int) ((Math.random() * 255) - 50);
+                int c3 = (int) ((Math.random() * 255) - 50);
+                int c2 = (int) ((Math.random() * 255) - 50);
+                cl.setBackgroundColor(Color.rgb(c1, c2, c3));
+                tv.setText(newText);
+                completed.add(newText);
+                turncounter--;
+            }
         }
+
 
         else
         {

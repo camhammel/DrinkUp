@@ -3,4 +3,6 @@
     <string name="title_activity_eight">Crazy Eights</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_trivia">Trivia Heat</string>
+    <string name="title_activity_mostlikely">Most Likely</string>
 </resources>

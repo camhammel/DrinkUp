@@ -21,7 +21,17 @@
             android:name=".Eight"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_eight"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Trivia"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_trivia"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".MostLikely"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_mostlikely"
+            android:theme="@style/FullscreenTheme" />
     </application>
 
 </manifest>

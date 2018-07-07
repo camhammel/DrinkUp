@@ -29,8 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Crazy Eights"
-            tools:targetApi="m" />
+            android:text="Crazy Eights" />
 
         <Button
             android:id="@+id/button2"
@@ -38,8 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Trivia Heat"
-            tools:targetApi="m" />
+            android:text="Trivia Heat" />
 
         <Button
             android:id="@+id/button3"
@@ -47,10 +45,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:backgroundTint="#999999"
-            android:backgroundTintMode="src_over"
             android:text="Most Likely"
-            tools:targetApi="m" />
+            android:backgroundTint="#999999"
+            android:backgroundTintMode="src_over"/>
 
         <Button
             android:id="@+id/button4"
@@ -60,7 +57,6 @@
             android:layout_margin="16dp"
             android:text="Charades"
             android:backgroundTint="#999999"
-            android:backgroundTintMode="src_over"
-            tools:targetApi="m" />
+            android:backgroundTintMode="src_over" />
     </LinearLayout>
 </RelativeLayout>
