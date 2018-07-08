@@ -5,4 +5,8 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_trivia">Trivia Heat</string>
     <string name="title_activity_mostlikely">Most Likely</string>
+    <string name="you_may_swear">, you may now swear again.</string>
+    <string name="game_over">Thanks for playing!</string>
+    <string name="stringPoint">Point!</string>
+    <string name="stringDrink">Drink up!</string>
 </resources>

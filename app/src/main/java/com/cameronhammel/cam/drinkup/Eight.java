@@ -25,6 +25,7 @@ public class Eight extends AppCompatActivity
     String [] songs;
     List<String> completed;
     int turncounter = -1;
+    String swearvirus;
 
     TextView tv;
     ConstraintLayout cl;
@@ -45,8 +46,8 @@ public class Eight extends AppCompatActivity
         texts[0] = "@, list 8 Disney characters or take 3 sips";
         texts[1] = "@, list 8 European countries or take 3 sips";
         texts[2] = "@, take a sip each time you're caught swearing in the next 8 turns";
-        texts[3] = "@, draw a # using snapchat and send it to any 8 friends or take 4 sips";
-        texts[4] = "@, draw a # using snapchat and send it to any 8 friends or take 4 sips";
+        texts[3] = "@, draw # using snapchat and send it to any 8 friends or take 4 sips";
+        texts[4] = "@, draw # using snapchat and send it to any 8 friends or take 4 sips";
         texts[5] = "@, if > is a pussy drinker give them 3 drinks. If they're outdrinking you drink 4 drinks.";
         texts[6] = "Drink 3 times if you haven't been to & in the past 8 months";
         texts[7] = "Drink 3 times if you haven't been to & in the past 8 months";
@@ -67,7 +68,7 @@ public class Eight extends AppCompatActivity
         texts[22] = "@, if you have $8 or less cash on hand, give out 5 sips";
         texts[23] = "The oldest player in the room may give out 8 sips";
         texts[24] = "Anyone who can't do 8 pushups must drink 4 times";
-        texts[25] = "If you've been single for over 8 months, drink 4 times";
+        texts[25] = "If you've been single for over 8 months, drink 4 times (you're welcome)";
         texts[26] = "@, drink 3 times (tough luck!)";
         texts[27] = "If you've seen anyone in the room nude, drink 8 times";
         texts[28] = "If you enjoy cold pizza, drink twice";
@@ -86,36 +87,36 @@ public class Eight extends AppCompatActivity
 
         //list of nouns accessed using the # key
         words = new String[30];
-        words[0] = "giraffe";
-        words[1] = "monkey";
-        words[2] = "penis";
-        words[3] = "superhero";
-        words[4] = "mouse";
-        words[5] = "beer";
-        words[6] = "mustache on another player";
-        words[7] = "winky face";
-        words[8] = "self-portrait";
-        words[9] = "female body";
+        words[0] = "a giraffe";
+        words[1] = "a monkey";
+        words[2] = "a penis";
+        words[3] = "a superhero";
+        words[4] = "a mouse";
+        words[5] = "a beer";
+        words[6] = "a mustache on another player";
+        words[7] = "a winky face";
+        words[8] = "a self-portrait";
+        words[9] = "a female body";
         words[10] = "buzz lightyear";
-        words[11] = "cereal mascot";
-        words[12] = "god";
+        words[11] = "a cereal mascot";
+        words[12] = "God";
         words[13] = "spontaneous combustion";
         words[14] = "bat-shit crazy amish folk";
-        words[15] = "didgeridoo";
-        words[16] = "succubus";
-        words[17] = "pioneer";
-        words[18] = "government";
-        words[19] = "booty";
-        words[20] = "thong";
-        words[21] = "catamaran";
+        words[15] = "a didgeridoo";
+        words[16] = "a succubus";
+        words[17] = "a pioneer";
+        words[18] = "a government";
+        words[19] = "a booty";
+        words[20] = "a thong";
+        words[21] = "a catamaran";
         words[22] = "lasagna";
-        words[23] = "boogeyman";
-        words[24] = "toilet";
+        words[23] = "a boogeyman";
+        words[24] = "a toilet";
         words[25] = "Rick Astley";
-        words[26] = "chicken";
+        words[26] = "fireworks";
         words[27] = "Barack Obama";
-        words[28] = "kitten";
-        words[29] = "kamikaze";
+        words[28] = "a kitten";
+        words[29] = "a kamikaze";
 
         //list of destinations accessed using the & key
         places = new String[11];
@@ -144,13 +145,11 @@ public class Eight extends AppCompatActivity
         songs[8] = "I Want It That Way by the Backstreet Boys";
         songs[9] = "Sweet Caroline by Neil Diamond";
 
-
-        playRound();
+        play();
     }
 
-    private void playRound()
+    private void play()
     {
-
         refreshText(tv);
     }
 
@@ -162,7 +161,7 @@ public class Eight extends AppCompatActivity
         if (completed.size() >= 50)
         {
             cl.setBackgroundColor(Color.RED);
-            tv.setText("Thanks for playing!");
+            tv.setText(R.string.game_over);
 
             for (int i=0; i<completed.size(); i++)
                 Log.e("GAME_OVER: " + i, completed.get(i));
@@ -170,24 +169,26 @@ public class Eight extends AppCompatActivity
 
         else if (!completed.contains(newText))
         {
-            if (newText.contains("turns"))
+            if (newText.contains("swearing"))
             {
+                swearvirus = newText.substring(0, newText.indexOf(","));
                 turncounter = 8;
             }
 
             if (turncounter == 0)
             {
                 cl.setBackgroundColor(Color.GREEN);
-                tv.setText("All players can now swear again.");
+                tv.setText(String.format("%s%s", swearvirus, getString(R.string.you_may_swear)));
                 turncounter = -1;
             }
 
             else
                 {
-                int c1 = (int) ((Math.random() * 255) - 50);
-                int c3 = (int) ((Math.random() * 255) - 50);
-                int c2 = (int) ((Math.random() * 255) - 50);
+                int c1 = (int) Math.abs(((Math.random() * 255) - 50));
+                int c3 = (int) Math.abs(((Math.random() * 255) - 50));
+                int c2 = (int) Math.abs(((Math.random() * 255) - 50));
                 cl.setBackgroundColor(Color.rgb(c1, c2, c3));
+                Log.d("Eight Color: ", "" + c1 + ", " + c2 + ", " + c3);
                 tv.setText(newText);
                 completed.add(newText);
                 turncounter--;

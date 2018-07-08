@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_purple"
-    android:onClick="refreshText"
     tools:context=".MostLikely">
 
     <TextView
@@ -17,7 +16,8 @@
         android:layout_marginEnd="146dp"
         android:layout_marginStart="146dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="Rules: Whoever recieves the most votes must drink twice. If the votes are tied, the drinks are split."
+        android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
@@ -47,9 +47,9 @@
 
     <Button
         android:id="@+id/startTimer"
-        style="@android:style/Widget.Material.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

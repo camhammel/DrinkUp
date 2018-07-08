@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import static com.cameronhammel.cam.drinkup.MainActivity.finalplayers;
+import static com.cameronhammel.cam.drinkup.MainActivity.players;
+
 public class GameSelect extends AppCompatActivity
 {
 
@@ -26,8 +29,14 @@ public class GameSelect extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent i = new Intent(getApplicationContext(), Eight.class);
-                startActivity(i);
+                if (finalplayers.size() < 3)
+                {
+                    Toast.makeText(getApplicationContext(),"Crazy Eights requires at least three players to play. Please add more players in the previous screen.", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Intent i = new Intent(getApplicationContext(), Eight.class);
+                    startActivity(i);
+                }
             }
         });
 
