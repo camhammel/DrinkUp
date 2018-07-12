@@ -22,7 +22,7 @@ public class GameSelect extends AppCompatActivity
         Button eight = findViewById(R.id.button1);
         Button trivia = findViewById(R.id.button2);
         Button mostlikely = findViewById(R.id.button3);
-        Button drinkif = findViewById(R.id.button4);
+        Button hollywood = findViewById(R.id.button4);
 
         eight.setOnClickListener(new View.OnClickListener()
         {

@@ -36,7 +36,7 @@ public class MostLikely extends AppCompatActivity
         mediaPlayer2 = MediaPlayer.create(this, R.raw.bow);
 
         completed = new ArrayList<>();
-        contentArray = new String[25];
+        contentArray = new String[70];
         contentArray[0] = "Who is most likely to black out tonight?";
         contentArray[1] = "Who is most likely to adopt a dog?";
         contentArray[2] = "Who is most likely to not finish their food?";
@@ -62,7 +62,51 @@ public class MostLikely extends AppCompatActivity
         contentArray[22] = "Who is most likely to get an STD?";
         contentArray[23] = "Who is most likely to cry over a movie?";
         contentArray[24] = "Who is most likely to appear in a music video?";
-
+        contentArray[25] = "Who is most likely to take any bet?";
+        contentArray[26] = "Who is most likely to talk to people in a public bathroom?";
+        contentArray[27] = "Who is most likely to join a cult?";
+        contentArray[28] = "Who is most likely to be embarrassed by their parents?";
+        contentArray[29] = "Who is most likely to have a bad yearbook photo?";
+        contentArray[30] = "Who is most likely to believe in superstition?";
+        contentArray[31] = "Who is most likely to run a bar?";
+        contentArray[32] = "Who is most likely to walk into a window?";
+        contentArray[33] = "Who is most likely to get a speeding ticket?";
+        contentArray[34] = "Who is most likely to forget their own birthday?";
+        contentArray[35] = "Who is most likely to fall asleep before midnight on New Year's?";
+        contentArray[36] = "Who is most likely to dress up as a video game character?";
+        contentArray[37] = "Who is most likely to cheat on a test?";
+        contentArray[38] = "Who is most likely to dye their hair?";
+        contentArray[39] = "Who is most likely to offend a stranger?";
+        contentArray[40] = "Who is most likely to get back with their ex?";
+        contentArray[41] = "Who is most likely to not know the day of the week?";
+        contentArray[42] = "Who is most likely to lock their keys in their car?";
+        contentArray[43] = "Who is most likely to bake their friends cookies?";
+        contentArray[44] = "Who is most likely to visit another country first?";
+        contentArray[45] = "Who is most likely to go to work while drunk?";
+        contentArray[46] = "Who is most likely to correct someone's spelling?";
+        contentArray[47] = "Who is most likely to be able to live without a phone?";
+        contentArray[48] = "Who is most likely to use snapchat in the next 10 minutes?";
+        contentArray[49] = "Who is most likely to get worked up about a movie?";
+        contentArray[50] = "Who is most likely to cry while being pulled over by a police officer?";
+        contentArray[51] = "Who is most likely to take horrible pictures?";
+        contentArray[52] = "Who is most likely to take great pictures?";
+        contentArray[53] = "Who is most likely to see two or more movies in a week?";
+        contentArray[54] = "Who is most likely to skip work to drink?";
+        contentArray[55] = "Who is most likely to hurt themselves trying to use fireworks?";
+        contentArray[56] = "Who is most likely to be terrible with computers?";
+        contentArray[57] = "Who is most likely to be youtube-famous?";
+        contentArray[58] = "Who is most likely to lose their wallet at a party?";
+        contentArray[59] = "Who is most likely to want McDonalds at 2:00am?";
+        contentArray[60] = "Who is most likely to see two concerts in a month?";
+        contentArray[61] = "Who is most likely to become a crazy cat person?";
+        contentArray[62] = "Who is most likely to get an expensive haircut?";
+        contentArray[63] = "Who is most likely to get a terrible haircut?";
+        contentArray[64] = "Who is most likely to order multiple desserts at a restaurant?";
+        contentArray[65] = "Who is most likely to order two entrees at a restaurant?";
+        contentArray[66] = "Who is most likely to eat a tub of ice cream?";
+        contentArray[67] = "Who is most likely to fall down the stairs?";
+        contentArray[68] = "Who is most likely to start an arguement?";
+        contentArray[69] = "Who is most likely to lose their keys?";
     }
 
     public void refreshText(View view)
@@ -99,6 +143,7 @@ public class MostLikely extends AppCompatActivity
         }
 
         else {
+            countdown.setText("");
             countdown.setVisibility(View.VISIBLE);
             activate.setVisibility(View.INVISIBLE);
 

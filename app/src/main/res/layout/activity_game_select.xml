@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Charades"
+            android:text="Hollywood"
             android:backgroundTint="#999999"
             android:backgroundTintMode="src_over"
             tools:targetApi="m" />
