@@ -36,7 +36,7 @@ public class MostLikely extends AppCompatActivity
         mediaPlayer2 = MediaPlayer.create(this, R.raw.bow);
 
         completed = new ArrayList<>();
-        contentArray = new String[70];
+        contentArray = new String[100];
         contentArray[0] = "Who is most likely to black out tonight?";
         contentArray[1] = "Who is most likely to adopt a dog?";
         contentArray[2] = "Who is most likely to not finish their food?";
@@ -107,6 +107,36 @@ public class MostLikely extends AppCompatActivity
         contentArray[67] = "Who is most likely to fall down the stairs?";
         contentArray[68] = "Who is most likely to start an arguement?";
         contentArray[69] = "Who is most likely to lose their keys?";
+        contentArray[70] = "Who is most likely to discover new music?";
+        contentArray[71] = "Who is most likely to have a terrible music taste?";
+        contentArray[72] = "Who is most likely to always have the newest phone?";
+        contentArray[73] = "Who is most likely to spend 250 dollars on a night out?";
+        contentArray[74] = "Who is most likely to be careful with their money?";
+        contentArray[75] = "Who is most likely to die alone?";
+        contentArray[76] = "Who is most likely to become an avid sports fan?";
+        contentArray[77] = "Who is most likely to not finish their drink?";
+        contentArray[78] = "Who is most likely to marry young?";
+        contentArray[79] = "Who is most likely to get pizza three times in a week?";
+        contentArray[80] = "Who is most likely to appreciate art at a museum?";
+        contentArray[81] = "Who is most likely to be bored at a museum?";
+        contentArray[82] = "Who is most likely to never leave their hometown?";
+        contentArray[83] = "Who is most likely to get multiple degrees?";
+        contentArray[84] = "Who is most likely to claim that they're funny?";
+        contentArray[85] = "Who is most likely to claim that they're fashionable?";
+        contentArray[86] = "Who is most likely to claim that they're smart?";
+        contentArray[87] = "Who is most likely to claim that they're dumb?";
+        contentArray[88] = "Who is most likely to go to bed at 3am?";
+        contentArray[89] = "Who is most likely to pull an all-nighter?";
+        contentArray[90] = "Who is most likely to date someone athletic?";
+        contentArray[91] = "Who is most likely to watch back-to-back hockey games?";
+        contentArray[92] = "Who is most likely to avoid relationships at all costs?";
+        contentArray[93] = "Who is most likely to cheat on their partner?";
+        contentArray[94] = "Who is most likely to never go to a gym?";
+        contentArray[95] = "Who is most likely to sleep over at the gym?";
+        contentArray[96] = "Who is most likely to befriend a stranger?";
+        contentArray[97] = "Who is most likely to make a conversation awkward?";
+        contentArray[98] = "Who is most likely to find minions hilarious?";
+        contentArray[99] = "Who is most likely to get a tattoo in Vegas?";
     }
 
     public void refreshText(View view)

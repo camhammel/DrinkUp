@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Drink Up</string>
-    <string name="title_activity_eight">Crazy Eights</string>
+    <string name="title_activity_down">Crazy Eights</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_trivia">Trivia Heat</string>
@@ -9,4 +9,10 @@
     <string name="game_over">Thanks for playing!</string>
     <string name="stringPoint">Point!</string>
     <string name="stringDrink">Drink up!</string>
+    <string name="please_select_a_game_below">Please Select a Game Below:</string>
+    <string name="down">Down</string>
+    <string name="trivia_heat">Trivia Heat</string>
+    <string name="most_likely">Most Likely</string>
+    <string name="hollywood">Hollywood</string>
+    <string name="title_activity_test">TestActivity</string>
 </resources>

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_margin="32dp"
-        android:text="Please Select a Game Below:"
+        android:text="@string/please_select_a_game_below"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         tools:layout_editor_absoluteX="176dp"
         tools:layout_editor_absoluteY="16dp" />
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Crazy Eights"
+            android:text="@string/down"
             tools:targetApi="m" />
 
         <Button
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Trivia Heat"
+            android:text="@string/trivia_heat"
             tools:targetApi="m" />
 
         <Button
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:backgroundTintMode="src_over"
-            android:text="Most Likely"
+            android:text="@string/most_likely"
             tools:targetApi="m" />
 
         <Button
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Hollywood"
+            android:text="@string/hollywood"
             android:backgroundTint="#999999"
             android:backgroundTintMode="src_over"
             tools:targetApi="m" />

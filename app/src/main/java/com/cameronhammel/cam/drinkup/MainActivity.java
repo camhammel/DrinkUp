@@ -1,11 +1,16 @@
 package com.cameronhammel.cam.drinkup;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +28,29 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FloatingActionButton floatingActionButton = findViewById(R.id.feedbackButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                String mailto = "mailto:drinkupfeedback@gmail.com" +
+                        "?subject=" + Uri.encode("Drink Up Feedback") +
+                        "&body=" + Uri.encode("Hi! I have some suggestions or feedback for the app. ");
+
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                emailIntent.setData(Uri.parse(mailto));
+
+                try
+                {
+                    startActivity(emailIntent);
+                }
+                catch (ActivityNotFoundException e)
+                {
+                    Toast.makeText(getApplicationContext(), "No Email App Installed",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         players = new String[6];
         finalplayers = new ArrayList();

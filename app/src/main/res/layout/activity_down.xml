@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0099cc"
-    tools:context="com.cameronhammel.cam.drinkup.Eight">
+    tools:context="com.cameronhammel.cam.drinkup.Down">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -14,13 +14,13 @@
          android:fitsSystemWindows. -->
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/eightConstraintLayout"
+        android:id="@+id/downConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:onClick="refreshText">
 
         <TextView
-            android:id="@+id/eightText"
+            android:id="@+id/downText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="299dp"
