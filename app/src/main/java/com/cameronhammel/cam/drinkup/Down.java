@@ -43,7 +43,7 @@ public class Down extends AppCompatActivity
         completed = new ArrayList<String>();
         completed.add("test");
         //names are accessed using the "@" key
-        texts = new String[50];
+        texts = new String[60];
         texts[0] = "@, list 8 Disney characters or take 3 sips";
         texts[1] = "@, list 6 European countries or take 3 sips";
         texts[2] = "@, take a sip each time you're caught swearing in the next 5 turns";
@@ -94,6 +94,17 @@ public class Down extends AppCompatActivity
         texts[47] = "Go around the room listing Beatles songs. The first person that can't must drink 4 times";
         texts[48] = "@, whoever you think has or had the highest GPA in the room must drink 3 times";
         texts[49] = "If you've ever worked at a restaurant, drink 4 times";
+        texts[50] = "If you've ever gone to work or class while drunk, take 5 sips";
+        texts[51] = "If you've ever gone to work or class hungover, take 3 sips";
+        texts[52] = "If you've bought a new phone in the past year, take 3 sips";
+        texts[53] = "@, whoever you think is the most optimistic in the room must take 4 sips";
+        texts[54] = "@, whoever you think is the most pessimistic in the room must take 4 sips";
+        texts[55] = "@, whoever you think has the best view in the room must take 3 sips";
+        texts[56] = "@, whoever you think has the nicest house must drink 4 times";
+        texts[57] = "@, whoever you think is the best looking must drink 3 times";
+        texts[58] = "@, whoever you think is the most ambitious must drink twice";
+        texts[59] = "@, whoever you think is the most nerdy must drink 4 times";
+
 
 
         //list of nouns accessed using the # key
