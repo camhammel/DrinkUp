@@ -24,6 +24,7 @@ public class Down extends AppCompatActivity
     String [] words;
     String [] places;
     String [] songs;
+    String [] adapt;
     List<String> completed;
     int turncounter = -1;
     String swearvirus;
@@ -43,7 +44,7 @@ public class Down extends AppCompatActivity
         completed = new ArrayList<String>();
         completed.add("test");
         //names are accessed using the "@" key
-        texts = new String[60];
+        texts = new String[100];
         texts[0] = "@, list 8 Disney characters or take 3 sips";
         texts[1] = "@, list 6 European countries or take 3 sips";
         texts[2] = "@, take a sip each time you're caught swearing in the next 5 turns";
@@ -87,7 +88,7 @@ public class Down extends AppCompatActivity
         texts[40] = "If you have a car that's 2015 or newer, take 4 sips";
         texts[41] = "If you've ever had a partner with over a 5 year age gap, take 5 sips";
         texts[42] = "If you know photoshop, give out 6 sips";
-        texts[43] = "If you play 2+ hrs of video games per day, take 4 sips";
+        texts[43] = "If you play 2+ hrs of video adapt per day, take 4 sips";
         texts[44] = "If you have an iPhone 7 or newer, take 4 sips";
         texts[45] = "The first person to blink in the next 10 seconds must drink 3 times, starting now";
         texts[46] = "Drink 3 times if you're currently holding your drink in your hand";
@@ -104,8 +105,65 @@ public class Down extends AppCompatActivity
         texts[57] = "@, whoever you think is the best looking must drink 3 times";
         texts[58] = "@, whoever you think is the most ambitious must drink twice";
         texts[59] = "@, whoever you think is the most nerdy must drink 4 times";
+        texts[60] = "@, whoever you think is the most easily irritated in the room must take 4 sips";
+        texts[61] = "@, whoever you think is the most easily distracted in the room must take 4 sips";
+        texts[62] = "@, whoever you think has the coolest hair in the room must take 3 sips";
+        texts[63] = "@, whoever you think has the nicest car must drink 4 times";
+        texts[64] = "@, whoever you think has the nicest body or best facial hair must drink 3 times";
+        texts[65] = "@, whoever you think has the best music taste may give out 3 sips";
+        texts[66] = "@, whoever you think is the physically strongest in the room must drink 4 times";
+        texts[67] = "@, whoever you think is the most tech savvy in the room must drink 3 times";
+        texts[68] = "@, whoever you think would be the fastest runner in the room must drink 3 times";
+        texts[69] = "@, challenge another person in the room to a race. The loser must drink 5 times";
+        texts[70] = "@, challenge another person in the room to a push-up battle. The loser must drink 5 times";
+        texts[71] = "@, challenge another person in the room to a rap battle. The loser must drink 5 times";
+        texts[72] = "@, whoever you think would make the best summer playlist can give out 3 drinks";
+        texts[73] = "@, whoever you think would make the best road-trip playlist can give out 3 drinks";
+        texts[74] = "@, whoever you think would make the best workout playlist can give out 3 drinks";
+        texts[75] = "Go around the room and name fruits (start with @). First person that can't think of one must drink 3 times";
+        texts[76] = "Go around the room and think of car brands (start with @). First person that can't think of one must drink 3 times";
+        texts[77] = "Go around the room and think of pizza restaurants (start with @). First person that can't think of one must drink 3 times";
+        texts[78] = "Go around the room and think of mexican restaurants (start with @). First person that can't think of one must drink 3 times";
+        texts[79] = "Go around the room and think of ice cream brands (start with @). First person that can't think of one must drink 3 times";
+        texts[80] = "Go around the room and think of phone brands (start with @). First person that can't think of one must drink 3 times";
+        texts[81] = "Go around the room and think of sports (start with @). First person that can't think of one must drink 3 times";
+        texts[82] = "Go around the room and think of exercises (start with @). First person that can't think of one must drink 3 times";
+        texts[83] = "Go around the room and think of grocery stores (start with @). First person that can't think of one must drink 3 times";
+        texts[84] = "Go around the room and think of clothing stores (start with @). First person that can't think of one must drink 3 times";
+        texts[85] = "Go around the room and think of coffee shops (start with @). First person that can't think of one must drink 3 times";
+        texts[86] = "Go around the room and think of lakes (start with @). First person that can't think of one must drink 3 times";
+        texts[87] = "Go around the room and think of hotel chains (start with @). First person that can't think of one must drink 3 times";
+        texts[88] = "Go around the room and think of fast food chains (start with @). First person that can't think of one must drink 3 times";
+        texts[89] = "Go around the room and think of gas station chains (start with @). First person that can't think of one must drink 3 times";
+        texts[90] = "If you've ever cried in public, drink 3 times";
+        texts[91] = "If you've ever accidentally cursed with a kid near you, drink 3 times";
+        texts[92] = "If you've ever gone to the movies alone, drink 3 times";
+        texts[93] = "If you've ever gotten a parking ticket, drink 3 times";
+        texts[94] = "If you've ever gotten a speeding ticket, drink 3 times";
+        texts[95] = "If you've ever been kicked out of a public place, drink 5 times";
+        texts[96] = "If you've ever been hushed at in a library, drink 3 times";
+        texts[97] = "If you've ever vandalized with graffiti, drink 3 times";
+        texts[98] = "If you've ever paid over $15 for a beer, drink 3 times";
+        texts[99] = "If you've been to Disneyworld, drink 3 times";
 
 
+        //Minigames to continue between rounds.
+        adapt = new String [15];
+        adapt[0] = "@, give > a back/neck massage for the next 4 rounds or drink 4 times";
+        adapt[1] = "@, give > a compliment each round for the next 6 rounds or drink 6 times";
+        adapt[2] = "@, it's honesty time. Drink 3 times each time you're caught lying for the next 7 turns";
+        adapt[3] = "@, you have to speak in a russian accent indefinitely";
+        adapt[4] = "@, you have to speak in a canadian accent indefinitely";
+        adapt[5] = "@, you have to speak in a southern accent indefinitely";
+        adapt[6] = "@, you have to speak in a jamaican accent indefinitely";
+        adapt[7] = "@, you have to speak in an australian accent indefinitely";
+        adapt[8] = "@, you have to speak in a british accent indefinitely";
+        adapt[9] = "@, you're grounded. Sit down facing the wall indefinitely";
+        adapt[10] = "@, repeat anything that > says indefinitely";
+        adapt[11] = "@, you now have to sing instead of speak";
+        adapt[12] = "@, you'll be speaking (or trying to speak) mandarin for the next few rounds";
+        adapt[13] = "@, you'll be speaking (or trying to speak) italian for the next few rounds";
+        adapt[14] = "@, you'll be lying down from now on";
 
         //list of nouns accessed using the # key
         words = new String[30];

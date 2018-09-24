@@ -128,7 +128,7 @@ public class MostLikely extends AppCompatActivity
         contentArray[88] = "Who is most likely to go to bed at 3am?";
         contentArray[89] = "Who is most likely to pull an all-nighter?";
         contentArray[90] = "Who is most likely to date someone athletic?";
-        contentArray[91] = "Who is most likely to watch back-to-back hockey games?";
+        contentArray[91] = "Who is most likely to watch back-to-back hockey adapt?";
         contentArray[92] = "Who is most likely to avoid relationships at all costs?";
         contentArray[93] = "Who is most likely to cheat on their partner?";
         contentArray[94] = "Who is most likely to never go to a gym?";
