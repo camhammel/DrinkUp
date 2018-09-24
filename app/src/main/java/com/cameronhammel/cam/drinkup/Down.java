@@ -249,26 +249,23 @@ public class Down extends AppCompatActivity
 
 
         else if (newText.contains(ERROR))
-        {
-            refreshText(view);
-        }
+            {
+               refreshText(view);
+            }
 
-        else
-            if (newText.contains("swearing"))
+        else if (newText.contains("swearing"))
             {
                 swearvirus = newText.substring(0, newText.indexOf(","));
                 turncounter = 8;
             }
-
-            if (turncounter == 0)
+        else if (turncounter == 0)
             {
                 cl.setBackgroundColor(Color.GREEN);
                 tv.setText(String.format("%s%s", swearvirus, getString(R.string.you_may_swear)));
                 turncounter = -1;
             }
-
-            else
-                {
+        else
+            {
                 int c1 = (int) Math.abs(((Math.random() * 255) - 50));
                 int c3 = (int) Math.abs(((Math.random() * 255) - 50));
                 int c2 = (int) Math.abs(((Math.random() * 255) - 50));
@@ -284,7 +281,8 @@ public class Down extends AppCompatActivity
     private String generateText() {
         String n = texts[(int) (Math.random() * texts.length)];
 
-        if (!completed.contains(n)) {
+        if (!completed.contains(n))
+        {
             int v = (int) (Math.random() * songs.length);
             int x = (int) (Math.random() * words.length);
             int y = (int) (Math.random() * places.length);
@@ -297,14 +295,16 @@ public class Down extends AppCompatActivity
             }
 
             completed.add(n);
+            System.out.println(completed.size());
             n = n.replaceAll("@", MainActivity.finalplayers.get(z) + "");
             n = n.replaceAll(">", MainActivity.finalplayers.get(z2) + "");
             n = n.replaceAll("#", words[x]);
             n = n.replaceAll("&", places[y]);
             n = n.replaceAll("=", songs[v]);
             return n;
-        } else
-            return ERROR;
+        }
+        else
+            return generateText();
     }
 }
 
